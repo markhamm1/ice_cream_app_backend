@@ -1,0 +1,7 @@
+{
+  id: flavor.id,
+  name: flavor.name,
+  ingredients: flavor.ingredients,
+  color: flavor.color,
+  image_url: flavor.image_url
+}
