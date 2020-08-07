@@ -18,4 +18,15 @@ class Api::FlavorsController < ApplicationController
       )  
     render 'show.json.jb'
   end
+  
+  def update
+    @flavor = Flavor.find_by(id: params[:id])
+    @flavor.update(
+      name: params[:name] || @flavor.name,
+      ingredients: params[:ingredients] || @flavor.ingredients,
+      color: params[:color] || @flavor.color,
+      image_url: params[:image_url] || @flavor.image_url
+      )
+    render 'show.json.jb'
+  end
 end

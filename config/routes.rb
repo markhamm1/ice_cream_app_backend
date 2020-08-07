@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get "/flavors" => "flavors#index"
     post "/flavors" => "flavors#create"
     get "/flavors/:id" => "flavors#show"
+    patch "/flavors/:id" => "flavors#update"
   end
 end
